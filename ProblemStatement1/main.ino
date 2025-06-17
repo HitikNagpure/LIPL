@@ -1,19 +1,17 @@
 #include <Arduino.h>
 
-// -------------------- Data Structure --------------------
+
 typedef struct {
   uint8_t dataID;
   int32_t DataValue;
 } Data_t;
 
-// -------------------- Global Variables --------------------
 uint8_t G_DataID = 1;
 int32_t G_DataValue = 0;
 
 bool priorityIncreased = false;
 UBaseType_t initialPriority = 1;
 
-// -------------------- Handles --------------------
 QueueHandle_t Queue1;
 TaskHandle_t TaskHandle_1;
 TaskHandle_t TaskHandle_2;
@@ -67,7 +65,6 @@ void ExampleTask2(void *pv) {
   }
 }
 
-// -------------------- Arduino Setup --------------------
 void setup() {
   Serial.begin(115200);
   delay(1000); // Let serial settle
@@ -86,7 +83,6 @@ void setup() {
   xTaskCreatePinnedToCore(ExampleTask2, "Task2", 2048, NULL, initialPriority, &TaskHandle_2, 1);
 }
 
-// -------------------- Arduino Loop (Simulating Data Changes) --------------------
 void loop() {
   delay(10000);  // Wait 10 seconds before each change
 
