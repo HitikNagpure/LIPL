@@ -16,20 +16,20 @@ This submission contains a reference PCB design for the **Nordic nPM1100** Power
 
 ## 🔧 Tools Used
 
-**KiCad 9.0 (Open-source PCB design suite)
-**SnapEDA/SnapMagic** (for symbol and footprint imports)
-**LCSC** (for BOM part sourcing)
-**ChatGPT and AI tools** (for learning, guidance, and troubleshooting)
+-**KiCad 9.0 (Open-source PCB design suite)
+-**SnapEDA/SnapMagic** (for symbol and footprint imports)
+-**LCSC** (for BOM part sourcing)
+-**ChatGPT and AI tools** (for learning, guidance, and troubleshooting)
 
 
 ## 🧪 Design Summary
 
-**Output Voltage:** 3.0V (configured using external resistors)
-**Charge Current:** 200 mA
-**Battery Voltage Measurement:** Included using a voltage divider connected to MCU ADC
-**Power & Charging LEDs:** Status indication via GPIO pins
-**Host Interface:** I2C lines and status outputs connected to pin headers
-**Power Input:** 5V via 2-pin header (assumed ripple-free, 1A capable)
+-**Output Voltage:** 3.0V (configured using external resistors)
+-**Charge Current:** 200 mA
+-**Battery Voltage Measurement:** Included using a voltage divider connected to MCU ADC
+-**Power & Charging LEDs:** Status indication via GPIO pins
+-**Host Interface:** I2C lines and status outputs connected to pin headers
+-**Power Input:** 5V via 2-pin header (assumed ripple-free, 1A capable)
 
 ---
 
